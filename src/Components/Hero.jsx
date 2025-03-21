@@ -11,8 +11,10 @@ const Hero = () => {
           Hey, I'm{" "}
           Ritik Meena
         </h1>
-        <p className="text-lg md:text-xl text-gray-700">
-          Full-Stack Developer crafting modern, scalable web applications.
+        <p className="text-lg md:text-2xl text-teal-800">
+          I wanted to be Spider-man in the future 
+          <br />
+          Now, I'm a Web-Developer 🕸️
         </p>
         
         {/* LinkedIn Button */}
