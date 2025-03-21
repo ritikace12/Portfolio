@@ -1,8 +1,8 @@
 const ProjectCard = ({ title, main, bannerImg, demoUrl, sourceUrl }) => {
   return (
-    <div className="relative bg-gray-900 border-2 border-teal-400 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 hover:shadow-teal-500/50">
+    <div className="relative bg-black border-2 border-teal-400 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 hover:shadow-teal-500/50">
       {/* Project Image */}
-      <img src={bannerImg} alt={title} className="w-full h-48 object-cover" />
+      <img src={bannerImg} alt={title} className="w-full h-48  object-cover" />
 
       {/* Content */}
       <div className="p-5 text-white">

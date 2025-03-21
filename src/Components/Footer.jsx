@@ -5,12 +5,7 @@ import { SiGeeksforgeeks } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16 px-10 md:px-32 border-t-4 border-pink-400 shadow-lg">
-      {/* Title */}
-      <h1 className="text-4xl md:text-6xl font-extrabold text-center text-teal-400 mb-8">
-        Contact & Resources
-      </h1>
-
+    <footer className="bg-black text-white py-12 px-10 md:px-32 shadow-lg">
       {/* Contact Links */}
       <div className="flex flex-wrap justify-center gap-6 text-lg font-semibold">
         <a href="mailto:ritikm361@gmail.com" className="flex items-center gap-2 hover:text-pink-400 transition">
@@ -35,8 +30,6 @@ const Footer = () => {
 
       {/* Extra Resources */}
       <div className="mt-12 text-center text-gray-400 text-lg font-medium">
-        <p>🚀 Passionate about **Front-end, Full-stack, and Open-source projects**.</p>
-        <p>🖤 Designed with **React, Tailwind CSS & Spider-Gwen vibes**.</p>
         <p className="mt-4 text-sm">
           © {new Date().getFullYear()} All rights reserved. Built with 💖 & caffeine.
         </p>
