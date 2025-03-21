@@ -1,45 +1,39 @@
 import React from "react";
-import heroImage from "/src/assets/Dev.avif";
+import heroImage from "/src/assets/Dev.avif"; // Ensure the correct path
 
 const Hero = () => {
   return (
-    <section className="bg-[#E8E6F1] text-black px-4 md:px-10 lg:px-12 py-2 flex flex-col items-center justify-center min-h-[85vh]">
-      {/* Hero Content */}
-      <div className="w-full flex flex-col md:flex-row items-center justify-between">
-        {/* Left - Hero Text */}
-        <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-pink-400">
-            Hey, <br />
-            I'm{" "}
-            <span className="text-teal-400 hover:text-black transition-all duration-300">
-              Ritik Meena
-            </span>
-          </h1>
-          <p className="text-lg text-gray-700 mt-1 font-medium">
-            Full-Stack Developer crafting modern, scalable web applications.
-          </p>
+    <section className="pt-20 pb-12 px-6 md:px-16 lg:px-24 bg-[#E8E6F1] flex flex-col md:flex-row items-center justify-between gap-10">
+      {/* Left Side - Text */}
+      <div className="md:w-1/2 text-center md:text-left space-y-5">
+        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-pink-400">
+          Hey, I'm{" "}
+          <span className="text-teal-400 hover:text-black transition-all duration-300">
+            Ritik Meena
+          </span>
+        </h1>
+        <p className="text-lg md:text-xl text-gray-700">
+          Full-Stack Developer crafting modern, scalable web applications.
+        </p>
+        <a
+          href="#projects"
+          className="inline-block bg-pink-400 border-2 border-pink-400 text-black font-extrabold px-6 py-3 rounded-xl transition-all hover:bg-white hover:text-pink-400 hover:scale-105"
+        >
+          See My Work 🚀
+        </a>
+      </div>
 
-          {/* Call-To-Action Button */}
-          <a
-            href="#projects"
-            className="inline-block mt-3 px-5 py-2 text-lg font-bold bg-pink-400 text-black rounded-md shadow-lg 
-            transition transform hover:scale-105 hover:shadow-pink-400"
-          >
-            See My Work
-          </a>
-        </div>
-
-        {/* Right - Image with Hover Glow */}
-        <div className="md:w-1/2 flex justify-center">
-          <img
-            className="rounded-xl w-36 h-36 md:w-64 md:h-64 object-cover transition-all duration-300 hover:shadow-teal-400 hover:scale-105"
-            src={heroImage}
-            alt="Ritik Meena"
-          />
-        </div>
+      {/* Right Side - Image */}
+      <div className="md:w-1/2 flex justify-center">
+        <img
+          src={heroImage}
+          alt="Ritik Meena"
+          className="w-60 md:w-80 lg:w-96 h-auto rounded-xl object-cover transition-all hover:shadow-teal-400 hover:scale-105"
+        />
       </div>
     </section>
   );
 };
 
 export default Hero;
+
