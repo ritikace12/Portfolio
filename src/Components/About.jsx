@@ -13,7 +13,7 @@ const About = () => {
         </h2>
         <p className="text-lg leading-relaxed ">
           I'm a passionate{" "}
-          <span className="text-teal-400 font-semibold">Full-Stack Developer</span>  
+          <span className="text-teal-400 font-semibold">Full-Stack Developer{" "}</span>  
           dedicated to building modern, high-performance web applications.  
           With expertise in{" "}
           <span className="text-teal-400 font-semibold">React, Node.js, and Tailwind CSS</span>,  
