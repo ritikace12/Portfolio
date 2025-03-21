@@ -5,7 +5,7 @@ import { SiGeeksforgeeks } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 px-10 md:px-32 shadow-lg">
+    <footer className="bg-gradient-to-r from-black via-gray-900 to-black text-white py-12 px-10 md:px-32 shadow-lg">
       {/* Contact Links */}
       <div className="flex flex-wrap justify-center gap-6 text-lg font-semibold">
         <a href="mailto:ritikm361@gmail.com" className="flex items-center gap-2 hover:text-pink-400 transition">
@@ -39,5 +39,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 

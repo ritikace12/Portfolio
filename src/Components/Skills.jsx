@@ -17,10 +17,10 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-20 px-6 sm:px-12 md:px-20 lg:px-32 bg-white text-black border-y-4 border-pink-400 shadow-lg"
+      className="ml-18 mr-18 py-13 px-4 sm:px-12 md:px-16 lg:px-24 bg-white text-black border-y-2 border-x-2 border-pink-400 shadow-[0_0_15px_rgba(255,20,147,0.8)] "
     >
       {/* Title */}
-      <h1 className="text-4xl md:text-6xl font-extrabold text-center mb-10 text-teal-400">
+      <h1 className="text-4xl md:text-6xl font-bold text-center mb-10 text-teal-400">
         Skills & Technologies
       </h1>
 
@@ -30,7 +30,7 @@ const Skills = () => {
           <div
             key={index}
             className="p-6 border-2 border-pink-400 rounded-lg shadow-md flex flex-col 
-                      items-center justify-center gap-3 bg-white text-black 
+                      items-center justify-center gap-3 bg-white]]]] text-black 
                       transform transition duration-300 hover:scale-105 
                       hover:shadow-[0_0_15px_rgba(255,20,147,0.8)]"
           >

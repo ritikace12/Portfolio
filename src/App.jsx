@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import About from "./Components/About"
 const App = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-gradient-to-r from-black via-gray-900 to-black text-white">
       <Navbar />
       <Hero />
       <About />

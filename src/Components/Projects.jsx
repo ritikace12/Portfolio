@@ -6,13 +6,16 @@ import placeholderImg from "../assets/Car.png"; // Placeholder images
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-black text-white py-20 px-10 md:px-40">
-      <h1 className="text-4xl md:text-6xl font-extrabold text-center mb-12 text-pink-400">
+    <section
+      id="projects"
+      className="bg-gradient-to-r from-black via-gray-900 to-black text-white py-15 px-10 md:px-40"
+    >
+      <h1 className="text-4xl md:text-6xl font-bold text-center mb-12  text-pink-400">
         Projects
       </h1>
 
       {/* Full-Stack Projects */}
-      <h2 className="text-3xl font-bold text-teal-400 mb-6">Full-Stack Projects</h2>
+      <h2 className="text-3xl font-bold text-teal-400 mb-10"> Full-Stack Projects -</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <ProjectCard
           title="Chatbot with Gemini API"
@@ -28,7 +31,6 @@ const Projects = () => {
           demoUrl="https://communion-h.netlify.app/"
           sourceUrl="#"
         />
-        
         <ProjectCard
           title="Text-to-Image Wrapper Website"
           main="A sleek UI for generating images from text input."
@@ -39,9 +41,8 @@ const Projects = () => {
       </div>
 
       {/* Frontend Projects */}
-      <h2 className="text-3xl font-bold text-teal-400 mt-12 mb-6">Frontend Projects</h2>
+      <h2 className="text-3xl font-bold text-teal-400 mt-12 mb-10"> Frontend Projects -</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        
         <ProjectCard
           title="E-Commerce Clone"
           main="Frontend clone of a modern e-commerce site."
@@ -49,7 +50,6 @@ const Projects = () => {
           demoUrl="https://ani-merch.netlify.app/"
           sourceUrl="https://github.com/ritikace12/ecommerce-clone"
         />
-
         <ProjectCard
           title="Portfolio Website"
           main="Personal portfolio with animations and modern UI."
@@ -67,7 +67,7 @@ const Projects = () => {
       </div>
 
       {/* Webpages */}
-      <h2 className="text-3xl font-bold text-teal-400 mt-12 mb-6">Webpages</h2>
+      <h2 className="text-3xl font-bold text-teal-400 mt-12 mb-10"> Webpages -</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <ProjectCard
           title="Product Landing Page"
@@ -83,7 +83,6 @@ const Projects = () => {
           demoUrl="#"
           sourceUrl="#"
         />
-
         <ProjectCard
           title="Event Booking Page"
           main="A user-friendly event booking webpage."
