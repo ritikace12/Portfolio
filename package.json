@@ -12,9 +12,13 @@
   "dependencies": {
     "@remixicon/react": "^4.6.0",
     "@tailwindcss/vite": "^4.0.15",
-    "framer-motion": "^12.4.7",
+    "framer-motion": "^12.5.0",
+    "lucide-react": "^0.483.0",
+    "portgas-a": "file:portgas-a-0.1.0.tgz",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

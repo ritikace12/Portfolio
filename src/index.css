@@ -1,1 +1,531 @@
 @import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Layout */
+.comic-book {
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+nav.fixed {
+  @apply bg-white border-b-4 border-black shadow-lg;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  overflow: hidden;
+  z-index: 50;
+  background: 
+    linear-gradient(to right, rgba(255,255,255,0.92), rgba(255,255,255,0.95)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23000000' stroke-width='1' stroke-opacity='0.2'%3E%3Cpath d='M0 0l40 40M40 0L0 40M80 40l-40 40M40 40l40 40M40 0v80M0 40h80'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0L60 30L30 60L0 30z M30 10L50 30L30 50L10 30z' stroke='%23000000' stroke-opacity='0.15' stroke-width='1' fill='none'/%3E%3Ccircle cx='30' cy='30' r='4' fill='%23000000' fill-opacity='0.15'/%3E%3C/svg%3E");
+  background-size: auto, 80px 80px, 60px 60px;
+  background-position: center, center, center;
+}
+
+/* Enhanced Web Pattern Overlay */
+nav.fixed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 0 0, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 0 0 / 120px 120px,
+    radial-gradient(circle at 100% 0, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 100% 0 / 120px 120px,
+    radial-gradient(circle at 0 100%, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 0 100% / 120px 120px,
+    radial-gradient(circle at 100% 100%, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 100% 100% / 120px 120px;
+  background-repeat: no-repeat;
+  z-index: 2;
+  opacity: 1;
+  animation: pulseWeb 3s ease-in-out infinite;
+}
+
+/* Enhanced Web Lines */
+.web-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(0,0,0,0.15) 49%, rgba(0,0,0,0.15) 51%, transparent 52%) 0 0 / 20px 20px,
+    linear-gradient(-45deg, transparent 48%, rgba(0,0,0,0.15) 49%, rgba(0,0,0,0.15) 51%, transparent 52%) 0 0 / 20px 20px;
+  opacity: 1;
+  animation: webPulse 4s ease-in-out infinite alternate;
+}
+
+/* Enhanced Container Background */
+nav .container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 5;
+  background: linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+}
+
+/* Page Layout */
+.comic-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 8rem;
+  scroll-margin-top: 7rem;
+  overflow-x: hidden;
+}
+
+/* Comic Elements */
+.comic-panel {
+  @apply relative bg-white p-6 transform;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 0.5rem;
+  z-index: 10;
+}
+
+.comic-panel:hover {
+  transform: scale(1.02) rotate(1deg);
+  z-index: 15;
+}
+
+.comic-caption {
+  @apply absolute -top-4 left-4 bg-white px-4 py-1 transform -rotate-2;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  z-index: 20;
+}
+
+.comic-action-text {
+  @apply absolute text-2xl font-black;
+  color: #ff3d00;
+  text-shadow: 2px 2px 0 black;
+  animation: actionPop 0.5s ease infinite alternate;
+  z-index: 30;
+}
+
+/* Animations */
+@keyframes actionPop {
+  from { 
+    transform: scale(1) rotate(-5deg);
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.3));
+  }
+  to { 
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.3));
+  }
+}
+
+@keyframes pulseWeb {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes webPulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .comic-page {
+    padding: 1rem;
+    padding-top: 6rem;
+  }
+
+  nav .container {
+    padding: 0.5rem;
+  }
+
+  .comic-panel {
+    margin: 0.25rem;
+  }
+
+  .comic-action-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comic-page {
+    padding: 0.5rem;
+    padding-top: 5rem;
+  }
+
+  .comic-panel {
+    padding: 0.75rem;
+  }
+
+  .comic-action-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Comic Page Styles */
+.comic-page-header {
+  @apply relative mb-12;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Origin Story Layout */
+.origin-story-layout {
+  display: grid;
+  grid-template-areas:
+    "hero hero hero"
+    "origin powers powers";
+  gap: 2rem;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Panel Styles for Origin Story */
+.main-hero-panel {
+  grid-area: hero;
+  min-height: 400px;
+  transform: rotate(-1deg);
+}
+
+.origin-panel {
+  grid-area: origin;
+  min-height: 500px;
+  transform: rotate(1deg);
+}
+
+.powers-panel {
+  grid-area: powers;
+  min-height: 500px;
+  transform: rotate(-0.5deg);
+}
+
+/* Comic Issue Number */
+.comic-issue-number {
+  position: absolute;
+  top: -1.5rem;
+  right: 2rem;
+  background: #ff3d00;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  transform: rotate(12deg);
+  border: 3px solid black;
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+  z-index: 25;
+}
+
+/* Left Speech Bubble */
+.left-bubble {
+  left: 1rem !important;
+  right: auto !important;
+  transform: rotate(-5deg) !important;
+  margin: 2rem 0;
+  width: auto;
+  max-width: 90%;
+}
+
+.left-bubble::after {
+  left: 2rem !important;
+  right: auto !important;
+}
+
+/* Corner Web Decorations */
+.corner-web {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.corner-web.top-left {
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at top left, transparent 30%, black 70%);
+  transform: rotate(-45deg);
+}
+
+.corner-web.top-right {
+  top: 0;
+  right: 0;
+  background: radial-gradient(circle at top right, transparent 30%, black 70%);
+  transform: rotate(45deg);
+}
+
+.corner-web.bottom-left {
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at bottom left, transparent 30%, black 70%);
+  transform: rotate(-135deg);
+}
+
+.corner-web.bottom-right {
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(circle at bottom right, transparent 30%, black 70%);
+  transform: rotate(135deg);
+}
+
+/* Comic Grid Layout */
+.comic-grid-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Panel Variations */
+.hero-panel {
+  grid-column: 1 / -1;
+  min-height: 400px;
+}
+
+.current-project-panel {
+  @apply bg-white;
+  min-height: 300px;
+}
+
+.cliffhanger-panel {
+  grid-column: 1 / -1;
+  @apply bg-gradient-to-br from-red-600 to-blue-600 text-white;
+}
+
+/* Comic Navigation */
+.comic-nav-link {
+  @apply font-bold relative transition-transform;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
+
+.comic-nav-link:hover {
+  @apply text-blue-600;
+}
+
+.comic-nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-black transform scale-x-0 transition-transform;
+  transform-origin: right;
+}
+
+.comic-nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.comic-speech-bubble {
+  display: none;
+}
+
+.comic-speech-bubble::after {
+  display: none;
+}
+
+/* Comic Title Text */
+.comic-title-text {
+  font-family: 'Bangers', cursive;
+  text-shadow: 
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Comic Burst */
+.comic-burst {
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+}
+
+/* Comic Effects */
+.comic-effects {
+  display: none;
+}
+
+.spider {
+  display: none;
+}
+
+/* Animations */
+@keyframes spiderSwing {
+  0% { transform: rotate(-10deg) translateY(0); }
+  50% { transform: rotate(10deg) translateY(-20px); }
+  100% { transform: rotate(-10deg) translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .comic-page {
+    padding: 1.5rem;
+    padding-top: 7rem;
+  }
+
+  .origin-story-layout {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .comic-title-text {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .comic-page {
+    padding: 0.75rem;
+    padding-top: 5.5rem;
+  }
+
+  nav .container {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .comic-nav-link {
+    @apply text-sm py-2;
+  }
+
+  .comic-panel {
+    padding: 1rem;
+    margin: 0.25rem;
+  }
+
+  .comic-page-header {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .comic-issue-number {
+    top: -2.5rem;
+    right: 0.5rem;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .comic-speech-bubble,
+  .left-bubble {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 360px) {
+  nav .flex.gap-6 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .comic-nav-link {
+    font-size: 0.7rem;
+    padding: 0.25rem;
+  }
+
+  .comic-title-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Comic Button Styles */
+.comic-button {
+  background: linear-gradient(45deg, #ff0000, #0000ff);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 black;
+  transform: rotate(-2deg);
+  transition: all 0.2s ease;
+}
+
+.comic-button:hover {
+  transform: rotate(0deg) translateY(-2px);
+  box-shadow: 5px 5px 0 black;
+}
+
+.comic-button:active {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 0 black;
+}
+
+/* Mobile Menu Enhancements */
+.mobile-menu-button {
+  @apply relative z-10;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  transform: rotate(90deg);
+}
+
+/* Mobile Navigation Panel */
+.mobile-nav-panel {
+  @apply bg-white relative overflow-hidden;
+  border-top: 2px solid rgba(0,0,0,0.1);
+}
+
+.mobile-nav-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(0,0,0,0.05) 49%, rgba(0,0,0,0.05) 51%, transparent 52%) 0 0 / 20px 20px,
+    linear-gradient(-45deg, transparent 48%, rgba(0,0,0,0.05) 49%, rgba(0,0,0,0.05) 51%, transparent 52%) 0 0 / 20px 20px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Logo Enhancement */
+.logo-container {
+  @apply flex items-center gap-2;
+  position: relative;
+}
+
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(to right, #ff3d00, transparent);
+  transform: translateY(-50%);
+}

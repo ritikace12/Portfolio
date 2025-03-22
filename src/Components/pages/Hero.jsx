@@ -2,7 +2,7 @@ import React from "react";
 import { CiLinkedin } from "react-icons/ci"; // Import LinkedIn Icon
 import { motion } from "framer-motion";
 import { FaSpider, FaGlobe } from "react-icons/fa";
-import heroImage from "../Assets/images/DEV.avif"; // Fixed the image path to match the actual file
+import heroImage from "../Assets/DEV.avif"; // Fixed the image path to match the actual file
 
 const Hero = () => {
   return (

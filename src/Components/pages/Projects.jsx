@@ -1,15 +1,15 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
-import chatbotImg from "../Assets/images/Jarvis.png";
-import textImage from "../Assets/images/car.png";
-import ecommerceClone from "../Assets/images/Anime-Merch.png";
-import nezukoImg from "../Assets/images/Nezuko.png";
-import mistImg from "../Assets/images/Mist.png";
-import placeholderImg from "../Assets/images/car.png";
-import hubImg from "../Assets/images/Hub.png";
-import ritikImg from "../Assets/images/DEV.avif";
-import uiImg from "../Assets/images/PORTGAS-UI.png";
+import chatbotImg from "../Assets/Jarvis.png";
+import textImage from "../Assets/car.png";
+import ecommerceClone from "../Assets/Anime-Merch.png";
+import nezuko from "../Assets/Nezuko.png";
+import mist from "../Assets/Mist.png";
+import placeholderImg from "../Assets/car.png";
+import hub from "../Assets/Hub.png";
+import ritik from "../Assets/DEV.avif";
+import ui from "../Assets/PORTGAS-UI.png";
 import { FaSpider } from "react-icons/fa";
 
 const Projects = () => {
@@ -86,7 +86,7 @@ const Projects = () => {
             <ProjectCard
               title="Event Manager App"
               main="A full-stack Event manager with database integration."
-              bannerImg={hubImg}
+              bannerImg={hub}
               onImageError={handleImageError}
               demoUrl="https://communion-h.netlify.app/"
               sourceUrl="#"
@@ -122,7 +122,7 @@ const Projects = () => {
             <ProjectCard
               title="Portfolio Website"
               main="Personal portfolio with animations and modern UI."
-              bannerImg={ritikImg}
+              bannerImg={ritik}
               onImageError={handleImageError}
               demoUrl="https://ritikmeena.netlify.app/"
               sourceUrl="https://github.com/ritikace12/portfolio"
@@ -130,7 +130,7 @@ const Projects = () => {
             <ProjectCard
               title="Portgas UI"
               main="A UI library for reusing Components"
-              bannerImg={uiImg}
+              bannerImg={ui}
               onImageError={handleImageError}
               demoUrl="#"
               sourceUrl="#"
@@ -150,7 +150,7 @@ const Projects = () => {
             <ProjectCard
               title="Product Landing Page"
               main="A stylish landing page for a product or service."
-              bannerImg={nezukoImg}
+              bannerImg={nezuko}
               onImageError={handleImageError}
               demoUrl="#"
               sourceUrl="#"
@@ -166,7 +166,7 @@ const Projects = () => {
             <ProjectCard
               title="Event Booking Page"
               main="A user-friendly event booking webpage."
-              bannerImg={mistImg}
+              bannerImg={mist}
               onImageError={handleImageError}
               demoUrl="#"
               sourceUrl="#"
