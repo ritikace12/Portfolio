@@ -47,7 +47,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-red-950 via-blue-950 to-red-950 py-20 px-6 md:px-16 lg:px-24 overflow-hidden">
+    <section className="relative min-h-screen bg-black py-20 px-6 md:px-16 lg:px-24 overflow-hidden">
       {/* Web Background Effect */}
       <div className="absolute inset-0 opacity-5">
         <motion.div
@@ -69,8 +69,8 @@ const Contact = () => {
           <span className="text-black font-bold tracking-wide text-xl">SEND YOUR</span>
         </div>
         <h1 className="text-5xl md:text-7xl font-extrabold">
-          <span className="text-red-500">WEB</span>
-          <span className="text-blue-500">SIGNAL</span>
+          <span className="text-[#E13D0E]">WEB</span>
+          <span className="text-[#035D83]">SIGNAL</span>
         </h1>
       </motion.div>
 
@@ -83,7 +83,7 @@ const Contact = () => {
           className="space-y-6"
         >
           <div className="flex items-center gap-4 mb-6">
-            <FaSpider className="text-3xl text-red-500" />
+            <FaSpider className="text-3xl text-[#E13D0E]" />
             <h2 className="text-3xl font-bold text-white">Get in Touch</h2>
           </div>
 
@@ -98,7 +98,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gradient-to-r from-red-950/50 to-blue-950/50 rounded-lg border border-white/10 text-white focus:outline-none focus:border-red-500 transition-all"
+                className="w-full px-4 py-3 bg-white rounded-lg border border-white/10 text-black focus:outline-none focus:border-red-500 transition-all"
               />
             </div>
             <div>
@@ -111,7 +111,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gradient-to-r from-red-950/50 to-blue-950/50 rounded-lg border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-all"
+                className="w-full px-4 py-3 bg-white rounded-lg border border-white/10 text-black focus:outline-none focus:border-blue-500 transition-all"
               />
             </div>
             <div>
@@ -124,14 +124,14 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-3 bg-gradient-to-r from-red-950/50 to-blue-950/50 rounded-lg border border-white/10 text-white focus:outline-none focus:border-yellow-400 transition-all resize-none"
+                className="w-full px-4 py-3 bg-white rounded-lg border border-white/10 text-black focus:outline-none focus:border-yellow-400 transition-all resize-none"
               />
             </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full py-4 bg-gradient-to-r from-red-500 to-blue-500 text-white font-bold rounded-lg shadow-lg hover:shadow-red-500/20 transition-all"
+              className="w-full py-4 bg-white text-black font-bold rounded-lg shadow-lg hover:shadow-red-500/20 transition-all"
             >
               Send Message
             </motion.button>
@@ -146,12 +146,12 @@ const Contact = () => {
           className="space-y-8"
         >
           <div className="flex items-center gap-4 mb-6">
-            <FaSpider className="text-3xl text-blue-500" />
+            <FaSpider className="text-3xl text-[#035D83]" />
             <h2 className="text-3xl font-bold text-white">Connect With Me</h2>
           </div>
 
-          <div className="bg-gradient-to-br from-red-950/50 to-blue-950/50 p-8 rounded-lg border border-white/10">
-            <p className="text-gray-300 leading-relaxed mb-8">
+          <div className="bg-white p-8 rounded-lg border border-white/10">
+            <p className="text-black leading-relaxed mb-8">
               Feel free to reach out! Whether you want to discuss a project, ask a question, 
               or just say hi, I'll get back to you as soon as possible.
             </p>
@@ -163,8 +163,8 @@ const Contact = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="flex items-center gap-3 p-4 bg-gradient-to-r from-red-500/10 to-blue-500/10 rounded-lg border border-white/5 text-gray-300 hover:text-white transition-colors"
+                  whileHover={{ scale: 1.05, y: -2.5 }}
+                  className="flex items-center gap-3 p-4 bg-white rounded-lg border-2 border-black text-black hover:text-[#035D83] hover:border-[#035D83] transition-colors"
                 >
                   {link.icon}
                   <span>{link.name}</span>
@@ -173,15 +173,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Location */}
-          <div className="bg-gradient-to-br from-red-950/50 to-blue-950/50 p-8 rounded-lg border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">Location</h3>
-            <p className="text-gray-300">
-              Based in Jaipur, India
-              <br />
-              Available for remote work worldwide
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>

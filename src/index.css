@@ -328,7 +328,7 @@ nav .container {
 }
 
 .comic-nav-link:hover {
-  @apply text-blue-600;
+  @apply text-[#E13D0E];
 }
 
 .comic-nav-link::after {
@@ -416,7 +416,7 @@ nav .container {
   }
 
   .comic-nav-link {
-    @apply text-sm py-2;
+    @apply text-sm py-2 text-black;
   }
 
   .comic-panel {

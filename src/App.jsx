@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { FaCode } from 'react-icons/fa';
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./Components/About";
 import Contact from './Components/Contact';
-import { TbSpider } from 'react-icons/tb';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,37 +23,41 @@ const App = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <FaCode className="text-blue-600 text-2xl" />
+              <FaCode className="text-[#e13d0e] text-2xl" />
               <span className="text-xl md:text-2xl font-bold">Ritik Meena</span>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex gap-6">
+            <div className="hidden text-black md:flex gap-6">
               <motion.a 
                 href="#page1" 
                 className="comic-nav-link"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
+
               >
                 ORIGIN STORY
               </motion.a>
               <motion.a 
                 href="#page2" 
                 className="comic-nav-link"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
+
               >
                 ADVENTURES
               </motion.a>
               <motion.a 
                 href="#page3" 
                 className="comic-nav-link"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
+
               >
                 TEAM UP!
               </motion.a>
               <motion.a 
                 href="#page4" 
                 className="comic-nav-link"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05}}
+
               >
                 NEXT ISSUE...
               </motion.a>
@@ -190,14 +192,14 @@ const App = () => {
         </section>
 
         {/* Page 4: Current Projects */}
-        <section id="page4" className="comic-page min-h-screen pt-24">
+        <section id="page4" className="comic-page min-h-screen pt-14">
           <div className="comic-page-header">
             <h1 className="comic-title-text text-4xl md:text-6xl text-center py-8">COMING SOON...</h1>
           </div>
-          <div className="comic-grid-layout">
+          <div className='gap-4 grid mb-4'>
             {/* Mark AI Assistant Project */}
             <div className="comic-panel current-project-panel">
-              <div className="comic-caption">MARK: THE AI ASSISTANT</div>
+              <div className="comic-caption">MARK-II : THE AI ASSISTANT</div>
               <div className="p-6">
                 <motion.h3 
                   className="text-3xl font-bold mb-4"
@@ -228,18 +230,12 @@ const App = () => {
             </div>
 
             {/* Cliffhanger */}
-            <div className="comic-panel cliffhanger-panel">
-              <motion.div 
-                className="text-4xl font-bold text-center p-8"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-              >
-                TO BE CONTINUED...
-              </motion.div>
-              <div className="comic-action-text rotate-12">*STAY TUNED!*</div>
-            </div>
+            <div className="comic-page-header">
+            <h1 className="comic-title-text text-4xl md:text-6xl text-center py-8">To Be Continued...</h1>
+          </div>
           </div>
         </section>
+       
       </main>
     </div>
   );
