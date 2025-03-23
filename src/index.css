@@ -27,41 +27,7 @@ nav.fixed {
   position: fixed;
   overflow: hidden;
   z-index: 50;
-  background: 
-    linear-gradient(to right, rgba(255,255,255,0.92), rgba(255,255,255,0.95)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23000000' stroke-width='1' stroke-opacity='0.2'%3E%3Cpath d='M0 0l40 40M40 0L0 40M80 40l-40 40M40 40l40 40M40 0v80M0 40h80'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0L60 30L30 60L0 30z M30 10L50 30L30 50L10 30z' stroke='%23000000' stroke-opacity='0.15' stroke-width='1' fill='none'/%3E%3Ccircle cx='30' cy='30' r='4' fill='%23000000' fill-opacity='0.15'/%3E%3C/svg%3E");
-  background-size: auto, 80px 80px, 60px 60px;
-  background-position: center, center, center;
-}
-
-/* Enhanced Web Pattern Overlay */
-nav.fixed::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(circle at 0 0, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 0 0 / 120px 120px,
-    radial-gradient(circle at 100% 0, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 100% 0 / 120px 120px,
-    radial-gradient(circle at 0 100%, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 0 100% / 120px 120px,
-    radial-gradient(circle at 100% 100%, transparent 60%, rgba(0,0,0,0.15) 61%, transparent 70%) 100% 100% / 120px 120px;
-  background-repeat: no-repeat;
-  z-index: 2;
-  opacity: 1;
-  animation: pulseWeb 3s ease-in-out infinite;
-}
-
-/* Enhanced Web Lines */
-.web-lines {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 3;
-  background: 
-    linear-gradient(45deg, transparent 48%, rgba(0,0,0,0.15) 49%, rgba(0,0,0,0.15) 51%, transparent 52%) 0 0 / 20px 20px,
-    linear-gradient(-45deg, transparent 48%, rgba(0,0,0,0.15) 49%, rgba(0,0,0,0.15) 51%, transparent 52%) 0 0 / 20px 20px;
-  opacity: 1;
-  animation: webPulse 4s ease-in-out infinite alternate;
+  background: white;
 }
 
 /* Enhanced Container Background */
@@ -72,7 +38,7 @@ nav .container {
   padding: 0.5rem 1rem;
   position: relative;
   z-index: 5;
-  background: linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  background: white;
 }
 
 /* Page Layout */
@@ -515,17 +481,12 @@ nav .container {
 
 /* Logo Enhancement */
 .logo-container {
-  @apply flex items-center gap-2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   position: relative;
 }
 
 .logo-container::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -15px;
-  width: 30px;
-  height: 2px;
-  background: linear-gradient(to right, #ff3d00, transparent);
-  transform: translateY(-50%);
+  display: none;
 }

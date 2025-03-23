@@ -14,7 +14,6 @@
     "@tailwindcss/vite": "^4.0.15",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.483.0",
-    "portgas-a": "file:portgas-a-0.1.0.tgz",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

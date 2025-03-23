@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaSpider, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaSpider, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const Contact = () => {
@@ -25,9 +25,9 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      name: 'GitHub',
-      icon: <FaGithub className="text-2xl" />,
-      url: 'https://github.com/ritikace12'
+      name: 'Instagram',
+      icon: <FaInstagram className="text-2xl" />,
+      url: 'https://instagram.com/ritikace12'
     },
     {
       name: 'LinkedIn',
@@ -42,7 +42,7 @@ const Contact = () => {
     {
       name: 'Email',
       icon: <MdEmail className="text-2xl" />,
-      url: 'mailto:ritikmeena@gmail.com'
+      url: 'mailto:ritikm361@gmail.com'
     }
   ];
 

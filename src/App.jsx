@@ -16,7 +16,7 @@ const App = () => {
       {/* Static Navbar */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b-4 border-black shadow-lg">
         <div className="web-lines"></div>
-        <div className="container mx-auto px-4">
+        <div className="container  px-4">
           <div className="flex items-center justify-between py-2">
             <motion.div 
               className="logo-container"

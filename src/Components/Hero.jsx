@@ -73,8 +73,7 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
               className="text-xl text-gray-300 font-medium"
             >
-              "With great <span className="text-[#E13D0E]">code</span> comes
-              great <span className="text-[#025B83]">responsibility</span>"
+              "With great <span className="text-[#E13D0E]">bugs</span> comes great <span className="text-[#025B83]">debugging</span>"
             </motion.p>
 
             {/* Stats */}
@@ -106,8 +105,8 @@ const Hero = () => {
                 href="https://linkedin.com/in/ritik-meena-9a5582204"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#E13D0E] to-[#025B83] 
-                          text-white font-bold px-8 py-3 rounded-xl 
+                className="inline-flex items-center mt-5 gap-3 bg-white text-black
+               font-bold px-8 py-3 rounded-xl 
                           transition-all duration-300 group"
               >
                 <span className="group-hover:tracking-wider transition-all duration-300">
