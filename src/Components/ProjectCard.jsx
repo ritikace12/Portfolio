@@ -28,7 +28,7 @@ const ProjectCard = ({ title, main, bannerImg, demoUrl, sourceUrl, onImageError 
       className="group relative bg-white rounded-lg border-2 border-white overflow-hidden"
     >
       {/* Project Image with Overlay */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative p-6  h-48 overflow-hidden">
         <img 
           src={bannerImg} 
           alt={title} 
@@ -39,7 +39,7 @@ const ProjectCard = ({ title, main, bannerImg, demoUrl, sourceUrl, onImageError 
       </div>
 
       {/* Content */}
-      <div className="relative p-6 space-y-4">
+      <div className="relative p-5 space-y-4">
         {/* Title with Spider-web accent */}
         <div className="relative">
           <h3 className="text-xl font-bold text-[#E13D0E] group-hover:text-[#E13D0E] transition-colors">

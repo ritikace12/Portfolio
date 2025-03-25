@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
-import chatbotImg from "../Assets/images/Jarvis.png";
-import textImage from "../Assets/images/car.png";
-import ecommerceClone from "../Assets/images/Anime-Merch.png";
+import chatbotImg from "../Assets/images/Friday.png";
+import karen from "../Assets/images/Karen.png";
+import gwen from "../Assets/images/Gwen.png";
 import nezukoImg from "../Assets/images/Nezuko.png";
 import mistImg from "../Assets/images/Mist.png";
 import placeholderImg from "../Assets/images/car.png";
@@ -71,34 +71,36 @@ const Projects = () => {
           <div className="flex items-center gap-4">
             <FaSpider className="text-3xl text-[#E13D0E]" />
             <h2 className="text-3xl font-bold text-white border-b-2 border-[#E13D0E] pb-2">
-              Full-Stack Projects
+              Full-Stack Projects -
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         
             <ProjectCard
-              title="Chatbot with Gemini API"
-              main="Built a chatbot using Google's Gemini API with a seamless chat UI."
-              bannerImg={chatbotImg}
+              title="Karen"
+              main="A text to image website with sleek UI for generating images from text input."
+              bannerImg={karen}
               onImageError={handleImageError}
-              demoUrl="https://mark-one.netlify.app/"
-              sourceUrl="https://github.com/ritikace12"
+              demoUrl="https://spidy-bugs.netlify.app/"
+              sourceUrl="#"
             />
             <ProjectCard
-              title="Event Manager App"
-              main="A full-stack Event manager with database integration."
+              title="Veronica"
+              main="A code review website for reviewing code built using Google's Gemini API."
               bannerImg={hubImg}
               onImageError={handleImageError}
-              demoUrl="https://communion-h.netlify.app/"
-              sourceUrl="https://github.com/ritikace12"
+              demoUrl="https://spidy-bugs.netlify.app/"
+              sourceUrl="#"
             />
             <ProjectCard
-              title="Text-to-Image Wrapper"
-              main="A sleek UI for generating images from text input."
-              bannerImg={textImage}
+              title="Friday"
+              main="Built an AI assistant with tuning model using Google's Gemini API with a seamless chat UI."
+              bannerImg={chatbotImg}
               onImageError={handleImageError}
-              demoUrl="#page1"
-              sourceUrl="https://github.com/ritikace12/text-image-wrapper"
+              demoUrl="https://friday-12.netlify.app/"
+              sourceUrl="#"
             />
+           
           </div>
         </div>
 
@@ -107,33 +109,34 @@ const Projects = () => {
           <div className="flex items-center gap-4">
             <FaSpider className="text-3xl text-[#035D83]" />
             <h2 className="text-3xl font-bold text-white border-b-2 border-[#035D83] pb-2">
-              Frontend Projects
+              Frontend Projects -
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProjectCard
-              title="E-Commerce Clone"
-              main="Frontend clone of a modern e-commerce site."
-              bannerImg={ecommerceClone}
-              onImageError={handleImageError}
-              demoUrl="https://ani-merch.netlify.app/"
-              sourceUrl="https://github.com/ritikace12/ecommerce-clone"
-            />
-            <ProjectCard
-              title="Portfolio Website"
-              main="Personal portfolio with animations and modern UI."
-              bannerImg={ritikImg}
-              onImageError={handleImageError}
-              demoUrl="https://ritikmeena-12.netlify.app/"
-              sourceUrl="https://github.com/ritikace12/portfolio"
-            />
-            <ProjectCard
+          <ProjectCard
               title="Portgas UI"
-              main="A UI library for reusing Components"
+              main="A UI library for reusing JSX Components."
               bannerImg={uiImg}
               onImageError={handleImageError}
-              demoUrl="https://ritikmeena.netlify.app/"
-              sourceUrl="https://github.com/ritikace12"
+              demoUrl="https://portgas-ui.netlify.app/"
+              sourceUrl="#"
+            />
+            <ProjectCard
+              title="Web Developer"
+              main="Spider-Man themed portfolio website with all my work."
+              bannerImg={ritikImg}
+              onImageError={handleImageError}
+              demoUrl="#page1"
+              sourceUrl="#"
+            />
+          
+             <ProjectCard
+              title="Portfolio Website"
+              main="Personal portfolio with animations and modern UI."
+              bannerImg={gwen}
+              onImageError={handleImageError}
+              demoUrl="https://ritikmeena-12.netlify.app/"
+              sourceUrl="#"
             />
           </div>
         </div>
@@ -143,33 +146,33 @@ const Projects = () => {
           <div className="flex items-center gap-4">
             <FaSpider className="text-3xl text-yellow-400" />
             <h2 className="text-3xl font-bold text-white border-b-2 border-yellow-300 pb-2">
-              Webpages
+              Landing Pages  -
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard
-              title="Product Landing Page"
-              main="A stylish landing page for a product or service."
+              title="Nezuko"
+              main="A stylish landing page built on Anime theme."
               bannerImg={nezukoImg}
               onImageError={handleImageError}
-              demoUrl="https://ritikmeena.netlify.app/"
-              sourceUrl="https://github.com/ritikace12"
+              demoUrl="https://nezuko-kamado.netlify.app/"
+              sourceUrl="#"
             />
             <ProjectCard
-              title="Resume Builder UI"
-              main="A clean, interactive UI for building resumes."
+              title="Zag Cars"
+              main="An automobile website with sleek UI."
               bannerImg={placeholderImg}
               onImageError={handleImageError}
               demoUrl="https://zagcars.netlify.app/"
-              sourceUrl="https://github.com/ritikace12"
+              sourceUrl="#"
             />
             <ProjectCard
-              title="Event Booking Page"
-              main="A user-friendly event booking webpage."
+              title="Hashira Training"
+              main="A landing page for a training website."
               bannerImg={mistImg}
               onImageError={handleImageError}
               demoUrl="https://mist-hashira.netlify.app/"
-              sourceUrl="https://github.com/ritikace12"
+              sourceUrl="#"
             />
           </div>
         </div>

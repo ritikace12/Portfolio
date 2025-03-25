@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaSpider, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { FaCode } from "react-icons/fa";
+import { SiGeeksforgeeks } from "react-icons/si";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,17 +29,28 @@ const Contact = () => {
     {
       name: 'Instagram',
       icon: <FaInstagram className="text-2xl" />,
-      url: 'https://instagram.com/ritikace12'
+      url: 'https://instagram.com/ritikmeena__12'
     },
     {
       name: 'LinkedIn',
       icon: <FaLinkedin className="text-2xl" />,
-      url: 'https://linkedin.com/in/ritik-meena-9a5582204'
+      url: 'https://www.linkedin.com/in/ritik-meena-9a5582204/'
     },
+    {
+      name: 'Leetcode',
+      icon: <FaCode className="text-2xl" />,
+      url: "https://leetcode.com/u/ritikmeena_12/"
+    },
+    {
+      name: 'GeeksforGeeks',
+      icon: <SiGeeksforgeeks className="text-2xl" />,
+      url: "https://www.geeksforgeeks.org/user/ritikmeena_12/"
+    },
+   
     {
       name: 'Twitter',
       icon: <FaTwitter className="text-2xl" />,
-      url: 'https://twitter.com/ritikace12'
+      url: 'https://x.com/ritikmeena_12'
     },
     {
       name: 'Email',

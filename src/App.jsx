@@ -197,37 +197,78 @@ const App = () => {
             <h1 className="comic-title-text text-4xl md:text-6xl text-center py-8">COMING SOON...</h1>
           </div>
           <div className='gap-4 grid mb-4'>
-            {/* Mark AI Assistant Project */}
-            <div className="comic-panel current-project-panel">
-              <div className="comic-caption">MARK-II : THE AI ASSISTANT</div>
-              <div className="p-6">
-                <motion.h3 
-                  className="text-3xl font-bold mb-4"
-                  initial={{ x: -100 }}
-                  whileInView={{ x: 0 }}
-                >
-                  Building the future of AI assistance...
-                </motion.h3>
-                <p className="text-lg mb-4">A revolutionary AI assistant that understands and helps like never before!</p>
-                <div className="comic-action-text">*PROCESSING...*</div>
-              </div>
-            </div>
 
-            {/* Vivid Website Project */}
-            <div className="comic-panel current-project-panel">
-              <div className="comic-caption">THE VIVID EXPERIENCE</div>
-              <div className="p-6">
-                <motion.h3 
-                  className="text-3xl font-bold mb-4"
-                  initial={{ x: 100 }}
-                  whileInView={{ x: 0 }}
-                >
-                  Creating vibrant digital experiences...
-                </motion.h3>
-                <p className="text-lg mb-4">A website that pushes the boundaries of design and interaction!</p>
-                <div className="comic-action-text">*DESIGNING...*</div>
-              </div>
-            </div>
+{/* UI Library Expansion Project */}
+<div className="comic-panel current-project-panel">
+  <div className="comic-caption">UI LIBRARY EXPANSION</div>
+  <div className="p-6">
+    <motion.h3 
+      className="text-3xl font-bold mb-4"
+      initial={{ x: -100 }}
+      whileInView={{ x: 0 }}
+    >
+      Expanding the UI component library...
+    </motion.h3>
+    <p className="text-lg mb-4">
+      Adding new interactive, reusable components with advanced styling and multiple variants.
+    </p>
+    <div className="comic-action-text">*UPGRADING...*</div>
+  </div>
+</div>
+{/* Friday - The Ultimate AI */}
+<div className="comic-panel current-project-panel">
+  <div className="comic-caption">FRIDAY</div>
+  <div className="p-6">
+    <motion.h3 
+      className="text-3xl font-bold mb-4"
+      initial={{ x: 100 }}
+      whileInView={{ x: 0 }}
+    >
+      Combining Jarvis & Karen into one AI...
+    </motion.h3>
+    <p className="text-lg mb-4">
+      An advanced AI assistant blending real-time intelligence with creative text-to-image generation.
+    </p>
+    <div className="comic-action-text">*EVOLVING...*</div>
+  </div>
+</div>
+
+{/* AI Code Corrector Project */}
+<div className="comic-panel current-project-panel">
+  <div className="comic-caption">AI CODE FIXER</div>
+  <div className="p-6">
+    <motion.h3 
+      className="text-3xl font-bold mb-4"
+      initial={{ x: -100 }}
+      whileInView={{ x: 0 }}
+    >
+      Building an AI-powered code correction tool...
+    </motion.h3>
+    <p className="text-lg mb-4">
+      A smart assistant that analyzes and fixes code errors instantly, making debugging effortless.
+    </p>
+    <div className="comic-action-text">*TESTING...*</div>
+  </div>
+</div>
+
+
+  {/* Template Builder Project */}
+  <div className="comic-panel current-project-panel">
+    <div className="comic-caption">TEMPLATE BUILDER</div>
+    <div className="p-6">
+      <motion.h3 
+        className="text-3xl font-bold mb-4"
+        initial={{ x: 100 }}
+        whileInView={{ x: 0 }}
+      >
+        Designing a Dynamic template builder...
+      </motion.h3>
+      <p className="text-lg mb-4">A website that lets users create and customize templates effortlessly with a sleek UI.</p>
+      <div className="comic-action-text">*BUILDING...*</div>
+    </div>
+  </div>
+
+
 
             {/* Cliffhanger */}
             <div className="comic-page-header">
