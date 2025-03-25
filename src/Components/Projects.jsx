@@ -81,7 +81,7 @@ const Projects = () => {
               main="A text to image website with sleek UI for generating images from text input."
               bannerImg={karen}
               onImageError={handleImageError}
-              demoUrl="https://spidy-bugs.netlify.app/"
+              demoUrl="https://karen-12.netlify.app/"
               sourceUrl="#"
             />
             <ProjectCard
